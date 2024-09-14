@@ -21,7 +21,7 @@ const App = () => {
         {/* Do not remove the main div */}
         <WeatherDisplay data = {data}/>
     </div>
-  );
+  )
 };
 
 export default App;
