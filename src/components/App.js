@@ -1,27 +1,27 @@
 
 import React, { useEffect, useState } from "react";
 import './../styles/App.css';
-import WeatherDisplay from "./WeatherDisplay"
+import WeatherDisplay from "./WeatherDisplay";
 
 
-const def = {temperature : 0 , condition : "Cool"}
+const def = {temperature : 0, conditions : "Cool"}
 
 const App = () => {
 
-  const[data,setData] = useState(def)
+  const[data, setData] = useState(def)
 
-  useEffect(()=>{
-    setTimeout(()=>{
-      setData({ temperature : 25, condition : "Sunny"})
-    },1000)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setData({ temperature: 25, conditions: "Sunny" })
+    }, 1000)
   })
 
   return (
     <div>
-        {/* Do not remove the main div */}
-        <WeatherDisplay data = {data}/>
+      <WeatherDisplay data={data} />
     </div>
   )
-};
+}
 
-export default App;
+export default App
